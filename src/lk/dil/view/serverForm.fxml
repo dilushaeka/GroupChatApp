@@ -2,7 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
@@ -12,7 +12,6 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="477.0" style="-fx-background-color: linear-gradient(to bottom left, #6B76FF ,#A5AEFF, #8551ed);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.dil.controller.ServerFormController">
    <children>
-      <ScrollPane fx:id="txtContext" layoutX="22.0" layoutY="81.0" prefHeight="463.0" prefWidth="425.0" />
       <AnchorPane layoutX="22.0" layoutY="584.0" prefHeight="82.0" prefWidth="425.0" style="-fx-background-color: gray; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;">
          <children>
             <TextField fx:id="txtMessage" layoutX="58.0" layoutY="28.0" prefHeight="26.0" prefWidth="268.0" promptText="Type here" />
@@ -45,5 +44,6 @@
          <font>
             <Font name="System Bold" size="23.0" />
          </font></Label>
+      <TextArea fx:id="txtArea" layoutX="28.0" layoutY="85.0" prefHeight="467.0" prefWidth="414.0" />
    </children>
 </AnchorPane>
