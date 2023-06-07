@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.image.Image?>
@@ -12,6 +13,7 @@
 
 <AnchorPane prefHeight="680.0" prefWidth="477.0" style="-fx-background-color: linear-gradient(to bottom left, #6B76FF ,#A5AEFF, #8551ed);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.dil.controller.ServerFormController">
    <children>
+      <ScrollPane fx:id="msgContext" layoutX="28.0" layoutY="161.0" opacity="0.7" prefHeight="430.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="124.0" />
       <AnchorPane layoutX="22.0" layoutY="584.0" prefHeight="82.0" prefWidth="425.0" style="-fx-background-color: gray; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;">
          <children>
             <TextField fx:id="txtMessage" layoutX="58.0" layoutY="28.0" prefHeight="26.0" prefWidth="268.0" promptText="Type here" />
@@ -44,7 +46,8 @@
          <font>
             <Font name="System Bold" size="23.0" />
          </font></Label>
-      <TextArea fx:id="txtArea" layoutX="28.0" layoutY="85.0" prefHeight="467.0" prefWidth="414.0" />
+
       <AnchorPane fx:id="emojiPane" layoutY="385.0" prefHeight="200.0" prefWidth="325.0" />
+      <JFXButton layoutX="398.0" layoutY="14.0" onAction="#exitOnAction" text="Exit" />
    </children>
 </AnchorPane>

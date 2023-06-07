@@ -2,9 +2,8 @@ package lk.dil.controller;
 
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -24,16 +23,18 @@ import java.net.Socket;
 public class Client1FormController {
 
     public TextField txtMessage;
-    public ImageView btnCamera;
     public ImageView btnAssets;
-    public ImageView btnSend;
-    public TextArea txtArea;
+
+    public ScrollPane msgContext;
+    public Button btnSend;
 
     public AnchorPane emojiPane;
 
     public Label lblClient;
 
     final int PORT=5000;
+    public ImageView btnImoji;
+
 
     Socket socket;
 
@@ -55,7 +56,13 @@ public class Client1FormController {
 
     boolean isUsed=false;
     public void initialize(){
+        Platform.setImplicitExit(false);
+        msgContext.setContent(context);
+        msgContext.vvalueProperty().bind(context.heightProperty());
+        msgContext.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        msgContext.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         lblClient.setText(Login1FormController.name);
+
 
         new Thread(() ->{
             try {
@@ -127,20 +134,21 @@ public class Client1FormController {
     }
 
 
-    public void asssetsOnAction(MouseEvent mouseEvent) {
+    public void asssetsOnAction(MouseEvent mouseEvent) throws IOException {
         FileChooser chooser= new FileChooser();
         Stage stage=new Stage();
         file =chooser.showOpenDialog(stage);
 
         if (file!=null){
+            dataOutputStream.writeUTF(file.getPath());
             path= file.getPath();
-            System.out.println("Selected");
+            System.out.println("Selected image");
             System.out.println(file.getPath());
             isImageChoose=true;
         }
     }
 
-    public void sendOnAction(MouseEvent mouseEvent) throws IOException {
+    public void sendOnAction(ActionEvent mouseEvent) throws IOException {
         sendMessage();
     }
 
@@ -157,14 +165,14 @@ public class Client1FormController {
         smile.setFitHeight(30);
         dialoVbox.getChildren().add(smile);
 
-        ImageView heart =new ImageView((new Image("lk/dil/assets/icons/heart.png.png")));
-        smile.setFitWidth(30);
-        smile.setFitHeight(30);
+        ImageView heart =new ImageView((new Image("lk/dil/assets/icons/heart.png")));
+        heart.setFitWidth(30);
+        heart.setFitHeight(30);
         dialoVbox.getChildren().add(heart);
 
-        ImageView sadFace =new ImageView((new Image("lk/dil/assets/icons/sad-face.png.png")));
-        smile.setFitWidth(30);
-        smile.setFitHeight(30);
+        ImageView sadFace =new ImageView((new Image("lk/dil/assets/icons/sad-face.png")));
+        sadFace.setFitWidth(30);
+        sadFace.setFitHeight(30);
         dialoVbox.getChildren().add(sadFace);
         smile.setOnMouseClicked(event -> {
            txtMessage.setText(txtMessage.getText()+"☺");

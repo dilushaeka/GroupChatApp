@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" focusTraversable="true" prefHeight="606.0" prefWidth="907.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lk.dil.controller.Login3FormController"
+            >
+
+    <children>
+        <ImageView fitHeight="631.0" fitWidth="1098.0" layoutX="-14.0" pickOnBounds="true">
+            <image>
+                <Image url="@../assets/images/main-image.jpg" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <Label layoutX="326.0" layoutY="23.0" prefHeight="147.0" prefWidth="418.0" text="Welcome" textFill="#493de0">
+            <font>
+                <Font name="Verdana Bold Italic" size="77.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtName" alignment="BASELINE_CENTER" labelFloat="true" layoutX="341.0" layoutY="235.0" prefHeight="44.0" prefWidth="388.0" promptText="Enter Your Name">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton fx:id="strtBtn" layoutX="467.0" layoutY="309.0" onAction="#StratBtnOnACtion" prefHeight="31.0" prefWidth="150.0" style="-fx-background-color: #03ecfc; -fx-background-radius: 30; -fx-border-width: 3px;" text="Start Chat">
+            <font>
+                <Font name="Symbol" size="24.0" />
+            </font>
+            <effect>
+                <BoxBlur />
+            </effect>
+        </JFXButton>
+    </children>
+
+</AnchorPane>

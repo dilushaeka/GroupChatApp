@@ -38,6 +38,7 @@ public class Client {
     public void  acceptConnection() throws IOException {
         serverSocket=new ServerSocket(port);
         accept=serverSocket.accept();
+        System.out.println("accepeted connection");
 
     }
 
