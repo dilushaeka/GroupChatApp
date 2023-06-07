@@ -186,6 +186,5 @@ public class Client2FormController {
             System.exit(0);
         }
         System.exit(0);
-
     }
 }
