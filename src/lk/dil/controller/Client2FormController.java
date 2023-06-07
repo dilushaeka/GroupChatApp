@@ -2,6 +2,7 @@ package lk.dil.controller;
 
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
@@ -178,4 +179,13 @@ public class Client2FormController {
         emojiPane.getChildren().add(dialoVbox);
     }
 
+    public void exitOnAction(ActionEvent actionEvent) throws IOException {
+        if (socket != null) {
+            dataOutputStream.writeUTF("exit".trim());
+            dataOutputStream.flush();
+            System.exit(0);
+        }
+        System.exit(0);
+
+    }
 }

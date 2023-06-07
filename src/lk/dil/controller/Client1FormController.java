@@ -34,6 +34,7 @@ public class Client1FormController {
 
     final int PORT=5000;
     public ImageView btnImoji;
+    public ImageView sendBtn;
 
 
     Socket socket;
@@ -148,7 +149,7 @@ public class Client1FormController {
         }
     }
 
-    public void sendOnAction(ActionEvent mouseEvent) throws IOException {
+    public void sendOnAction(MouseEvent mouseEvent) throws IOException {
         sendMessage();
     }
 
@@ -184,5 +185,14 @@ public class Client1FormController {
             txtMessage.setText(txtMessage.getText()+"☹");
         });
         emojiPane.getChildren().add(dialoVbox);
+    }
+
+    public void exitOnAction(ActionEvent actionEvent) throws IOException {
+        if (socket != null) {
+            dataOutputStream.writeUTF("exit".trim());
+            dataOutputStream.flush();
+            System.exit(0);
+        }
+        System.exit(0);
     }
 }
