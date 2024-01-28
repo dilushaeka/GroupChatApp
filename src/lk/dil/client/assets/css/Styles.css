@@ -1,0 +1,17 @@
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.29), 40.0, 0.1, 5.0, 5.0);
+}
+.fill{
+    -fx-text-fill: rgba(0,0,0,0.7);
+}
+.fill-login{
+    -fx-text-fill: rgba(255,255,255,0.9);
+    -fx-stroke: #fff;
+}
+.bg-color{
+    -fx-background-color: transparent;
+}
+
+.vBox{
+    -fx-background-image: url("F:\GDSE63\Second Sem\Group-Chat-App-JavaSocket-master\src\lk\ijse\gdse\client\assets\pics\backGround.jpg");
+}

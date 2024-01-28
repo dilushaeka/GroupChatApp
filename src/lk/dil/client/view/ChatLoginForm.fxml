@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="618.0" prefWidth="452.0" styleClass="shadow" stylesheets="@../assets/css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.client.controller.ChatLoginFormController">
+   <children>
+      <Pane layoutX="29.0" layoutY="113.0" prefHeight="469.0" prefWidth="452.0" style="-fx-background-radius: 0% 100% 0% 100% / 64% 0% 100% 36%; -fx-background-color: linear-gradient(to left, #1488cc, #2b32b2);" AnchorPane.bottomAnchor="173.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" opacity="0.51" prefHeight="86.0" prefWidth="88.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 69% 31% 45% 55% / 36% 35% 65% 64%;" />
+            <Pane layoutX="32.0" layoutY="233.0" opacity="0.42" prefHeight="53.0" prefWidth="52.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 12% 88% 45% 55% / 76% 35% 65% 24%;" />
+            <Pane layoutX="239.0" layoutY="304.0" opacity="0.18" prefHeight="96.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 66% 34% 59% 41% / 76% 18% 82% 24%;" />
+            <Pane layoutX="309.0" layoutY="47.0" opacity="0.33" prefHeight="125.0" prefWidth="128.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 31% 69% 50% 50% / 76% 64% 36% 24%;" />
+            <Pane layoutX="145.0" layoutY="147.0" opacity="0.51" prefHeight="86.0" prefWidth="88.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 69% 31% 45% 55% / 36% 35% 65% 64%;" />
+            <Pane layoutX="136.0" layoutY="239.0" opacity="0.51" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 69% 31% 45% 55% / 36% 35% 65% 64%;" />
+            <Pane layoutX="337.0" layoutY="256.0" opacity="0.18" prefHeight="61.0" prefWidth="63.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 66% 34% 59% 41% / 76% 18% 82% 24%;" />
+            <Pane layoutX="348.0" layoutY="339.0" opacity="0.18" prefHeight="41.0" prefWidth="41.0" style="-fx-background-color: linear-gradient(to left, #1488cc, #2b32b2); -fx-background-radius: 66% 34% 59% 41% / 76% 18% 82% 24%;" />
+            <Pane layoutX="2.0" prefHeight="410.0" prefWidth="452.0">
+               <children>
+                  <ImageView layoutX="178.0" layoutY="123.0">
+                     <image>
+                        <Image url="@../assets/pics/Chat.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="187.0" layoutY="71.0" prefHeight="123.0" prefWidth="52.0" text=" .." textFill="WHITE">
+                     <font>
+                        <Font size="84.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="219.0" text="Group" textFill="#ffffffc2">
+                     <font>
+                        <Font name="Arial Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="224.0" layoutY="214.0" text="Chatt" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="39.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="281.0" text="Welcome to group chatt" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="303.0" prefHeight="62.0" prefWidth="365.0" text="Free massages to all friends and make messaging&#10;fun with trending memes !" textAlignment="CENTER" textFill="#fffffff1">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="529.0" prefHeight="46.0" prefWidth="325.0" style="-fx-background-radius: 30px; -fx-background-color: rgba(13, 110, 253, 0.02); -fx-border-color: rgba(0,0,0,0.2); -fx-border-radius: 30px;" styleClass="shadow" stylesheets="@../assets/css/Styles.css">
+         <children>
+            <JFXTextField fx:id="txtUserName" focusColor="#5500ff" layoutX="20.0" layoutY="7.0" prefHeight="32.0" prefWidth="288.0" promptText="User Name..." stylesheets="@../assets/css/Styles.css" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Line endX="277.0" layoutX="141.0" layoutY="491.0" startX="-117.0" stroke="#0000004a" />
+      <Pane layoutX="350.0" layoutY="529.0" prefHeight="46.0" prefWidth="88.0" style="-fx-background-color: #2e86de; -fx-background-radius: 30px;">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="29.0" layoutY="12.0">
+               <image>
+                  <Image url="@../assets/pics/right-arrow.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#btnLoginOnAction" prefHeight="46.0" prefWidth="88.0" text="." textFill="TRANSPARENT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
