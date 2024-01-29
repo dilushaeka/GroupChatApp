@@ -1,4 +1,4 @@
-package lk.dil.server.controller;
+package lk.ijse.gdse.server.controller;
 
 import java.io.*;
 import java.net.Socket;

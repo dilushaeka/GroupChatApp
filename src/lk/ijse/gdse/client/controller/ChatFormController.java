@@ -1,4 +1,4 @@
-package lk.dil.client.controller;
+package lk.ijse.gdse.client.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;

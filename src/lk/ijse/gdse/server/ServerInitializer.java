@@ -1,4 +1,4 @@
-package lk.dil.server;
+package lk.ijse.gdse.server;
 
 import lk.ijse.gdse.server.controller.LocalSocketManager;
 

@@ -1,4 +1,4 @@
-package lk.dil.client;
+package lk.ijse.gdse.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

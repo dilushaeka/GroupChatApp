@@ -1,4 +1,4 @@
-package lk.dil.client.controller;
+package lk.ijse.gdse.client.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -10,11 +10,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import lk.ijse.gdse.server.controller.LocalSocketManager;
 
 import java.io.IOException;
-
-import static lk.ijse.gdse.server.ServerInitializer.localSocketManagerList;
 
 public class ChatLoginFormController {
 
